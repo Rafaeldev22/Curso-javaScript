@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio nacionalidade</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal 12pt Arial;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>De onde você eh?</h1>
+    Me fala onde você mora: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick = 'Analizar()'>
+    <div id = 'res'>
+
+    </div>
+     
+    <script>
+        function Analizar(){
+           var p = window.document.getElementById('pais')
+           var res = window.document.getElementById('res')
+           var txtp = String(p.value)
+           if (txtp == 'Brasil'){
+            res.innerHTML = `<p>Você é <strong>Brasileiro!</strong></p>`
+           } else {res.innerHTML = `<p>Você é <strong>Estrangeiro!</strong></p>`} 
+        }
+    </script>
+</body>
+</html>

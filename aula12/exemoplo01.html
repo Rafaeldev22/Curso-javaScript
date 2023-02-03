@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal 11pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Valeskinha De Açucar</h1>
+    Quem é mais doce que a valeska? <input type="text" name="pessoa" id="pessoa">
+    <input type="button" value="Verificar" onclick="consulta()">
+    <div id="res">
+
+    </div>
+    <script>
+        function consulta(){
+            var p = window.document.getElementById('pessoa')
+            var res = window.document.getElementById('res')
+            var txtp = String(p.value)
+            if (txtp == 'ninguem'){
+                res.innerHTML = '<p>Acertou <strong>Mizeravel!</strong></p>'
+            } else { res.innerHTML = '<p><strong>Nunca será!</strong></p>'}
+        }
+    </script> 
+</body>
+</html>
